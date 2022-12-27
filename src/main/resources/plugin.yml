@@ -1,0 +1,4 @@
+name: TACOWASA_014w
+version: '${project.version}'
+main: com.github.tacowasa059.tacowasa_014w.TACOWASA_014w
+api-version: 1.16
