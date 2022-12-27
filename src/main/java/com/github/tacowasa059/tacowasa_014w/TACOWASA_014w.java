@@ -17,7 +17,7 @@ public final class TACOWASA_014w extends JavaPlugin {
         scheduler.scheduleSyncRepeatingTask(this, new Runnable() {
             @Override
             public void run() {
-                String s="<TACOWASA_014>w";
+                String s="<TACOWASA_014> w";
                 Random rand = new Random();
                 int num = rand.nextInt(15) ;
                 String s2=StringUtils.repeat("w", num);
