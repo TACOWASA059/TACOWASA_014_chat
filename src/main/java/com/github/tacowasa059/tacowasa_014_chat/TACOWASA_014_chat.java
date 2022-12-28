@@ -1,4 +1,4 @@
-package com.github.tacowasa059.tacowasa_014w;
+package com.github.tacowasa059.tacowasa_014_chat;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
@@ -6,13 +6,10 @@ import org.bukkit.Bukkit;
 import org.apache.commons.lang.StringUtils;
 import java.util.Random;
 
-public final class TACOWASA_014w extends JavaPlugin {
+public final class TACOWASA_014_chat extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Register our command "kit" (set an instance of your command class as executor)
-
-
         BukkitScheduler scheduler=Bukkit.getServer().getScheduler();
         scheduler.scheduleSyncRepeatingTask(this, new Runnable() {
             @Override

@@ -1,4 +1,4 @@
-name: TACOWASA_014w
+name: TACOWASA_014_chat
 version: '${project.version}'
-main: com.github.tacowasa059.tacowasa_014w.TACOWASA_014w
+main: com.github.tacowasa059.tacowasa_014_chat.TACOWASA_014_chat
 api-version: 1.16
