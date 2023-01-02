@@ -10,17 +10,23 @@ public final class TACOWASA_014_chat extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+        //同調チャット
+        getServer().getPluginManager().registerEvents(new ChatEvent(this),this);
+
+        //wwwwの繰り返し
         BukkitScheduler scheduler=Bukkit.getServer().getScheduler();
         scheduler.scheduleSyncRepeatingTask(this, new Runnable() {
             @Override
             public void run() {
-                String s="<TACOWASA_014> w";
+                String s="<TACOWASA_014> ";
                 Random rand = new Random();
-                int num = rand.nextInt(15) ;
+                int num = rand.nextInt(getConfig().getInt("max-w"))+1 ;
                 String s2=StringUtils.repeat("w", num);
                 Bukkit.broadcastMessage(s+s2);
             }
-        }, 0L, 20L);
+        }, 0L, 20L*getConfig().getLong("interval"));
     }
 
     @Override

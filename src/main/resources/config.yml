@@ -1,0 +1,10 @@
+#interval:wチャットの間隔[秒]
+#cool_down_period:同調チャットのクールタイム[秒]
+#suffix-probability:語尾にわさ~がつく確率(0~1)
+#max-w:wの最大数
+#sayings:同調チャットリスト
+interval: 20
+cool_down_period: 8.0
+suffix-probability: 0.2
+max-w: 20
+sayings: ["こんにちは!","gg","いいね","オタクくんさぁ~","性格悪い","きもい","ぱん"]
