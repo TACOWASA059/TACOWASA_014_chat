@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 
 import java.util.HashMap;
+import java.util.Random;
 import java.util.UUID;
 
 public class ChatEvent implements Listener {
@@ -32,7 +33,13 @@ public class ChatEvent implements Listener {
             for(String key:cool_down.keySet()){
                 double diff=(double)System.currentTimeMillis()/1000.0 - cool_down.get(key).doubleValue();
                 if(event.getMessage().contains(key)&&diff>=plugin.getConfig().getDouble("cool_down_period")){
-                    Bukkit.broadcastMessage(wasawasa.addWASA("<TACOWASA_014> "+key));
+                    Random random=new Random();
+                    int b = random.nextInt(100);
+                    Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
+                        public void run() {
+                            Bukkit.broadcastMessage(wasawasa.addWASA("<TACOWASA_014> "+key));
+                        }
+                    }, b);
                     this.cool_down.put(key,Double.valueOf((double)System.currentTimeMillis()/1000.0));
                 }
             }
